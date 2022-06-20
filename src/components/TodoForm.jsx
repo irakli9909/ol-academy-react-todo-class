@@ -20,18 +20,14 @@ class TodoForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className="todo-form">
         <input
-          value={this.props.edit ==='' ? this.state.input:this.props.edit}
+          value={this.state.input}
           onChange={(e) => this.setState({ input: e.target.value })}
           className="todo-input"
           placeholder="დაამატეთ რამე"
         />
-        {this.props.edit !=='' ? (
-          <button onClick={() => { this.props.editUpdate(this.props.edit,this.state.input)}} className="todo-button">
-          განახლება
-        </button>
-        ):(<button type="submit" className="todo-button">
+        <button type="submit" className="todo-button">
           დამატება
-        </button>)}
+        </button>
         <button
           className="deleteAll"
           style={{ marginLeft: 5 }}
