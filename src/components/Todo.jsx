@@ -127,8 +127,19 @@ class Todo extends React.Component {
           </div>
         )}
         <div>
-          <button className="todo-button" onClick={()=> this.deleteFinished()} style={{marginRight: '5px'}}>დასრულებულების წაშლა</button>
-          <button className="todo-button" onClick={()=> this.deleteChekboxed()}>მონიშნულების წაშლა</button>
+          <button
+            className="todo-button"
+            onClick={() => this.deleteFinished()}
+            style={{ marginRight: "5px" }}
+          >
+            დასრულებულების წაშლა
+          </button>
+          <button
+            className="todo-button"
+            onClick={() => this.deleteChekboxed()}
+          >
+            მონიშნულების წაშლა
+          </button>
         </div>
       </div>
     );

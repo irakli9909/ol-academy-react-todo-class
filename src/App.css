@@ -17,7 +17,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
   width: 45%;
   min-height: 600px;
   background: white;

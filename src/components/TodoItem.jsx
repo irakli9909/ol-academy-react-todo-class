@@ -2,7 +2,7 @@ import React from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { BiCheckCircle } from "react-icons/bi";
 import { AiFillEdit } from "react-icons/ai";
-class Todoitem extends React.Component {
+class TodoItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -23,7 +23,9 @@ class Todoitem extends React.Component {
           <AiFillEdit
             className="check"
             style={{ marginRight: 5 }}
-            onClick={() => this.props.edit(this.props.todo.text,this.props.todo.id)}
+            onClick={() =>
+              this.props.edit(this.props.todo.text, this.props.todo.id)
+            }
           ></AiFillEdit>
           <RiCloseCircleLine
             className="check"
@@ -40,4 +42,4 @@ class Todoitem extends React.Component {
   }
 }
 
-export default Todoitem;
+export default TodoItem;

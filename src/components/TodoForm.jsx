@@ -4,17 +4,18 @@ class TodoForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: ""
+      input: "",
     };
   }
-  clear = () => {this.setState({ input: "" });}
+  clear = () => {
+    this.setState({ input: "" });
+  };
 
   handleSubmit = (e) => {
     e.preventDefault();
     if (this.state.input.length >= 1) {
       this.props.addTodo(this.state.input, this.clear);
     }
-
   };
   render() {
     return (
@@ -41,4 +42,3 @@ class TodoForm extends React.Component {
 }
 
 export default TodoForm;
-
